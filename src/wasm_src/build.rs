@@ -3,6 +3,8 @@ fn main() {
         .archiver("llvm-ar")
         .cpp_link_stdlib(None)
         .cpp(true)
-        .file("libTest.cpp")
-        .compile("libTest.a");
+        .files([
+            "src/cpp_src/foolib.cpp"
+        ])
+        .compile("foolib");
 }
