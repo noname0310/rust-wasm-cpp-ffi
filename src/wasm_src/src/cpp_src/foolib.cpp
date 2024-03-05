@@ -1,3 +1,5 @@
+#include <cstddef>
+
 typedef unsigned int size_t;
 
 void* (*allocate)(size_t);
@@ -15,7 +17,7 @@ extern "C" {
 
     int allocation_test(int size) {
         int* ptr = (int*)allocate(size * sizeof(int));
-        ptr[0] = 42;
+        ptr[0] = 42234;
         int result = ptr[0];
         deallocate(ptr, size * sizeof(int));
         return result;

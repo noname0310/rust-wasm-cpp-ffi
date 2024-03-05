@@ -1,4 +1,5 @@
 use wasm_bindgen::prelude::*;
+use web_sys::console;
 
 #[link(name = "foolib")]
 extern "C" {
@@ -25,6 +26,7 @@ unsafe extern "C" fn dealloc(ptr: *mut u8, size: usize) {
 
 #[wasm_bindgen(js_name = init)]
 pub fn init() {
+    console_error_panic_hook::set_once();
     unsafe {
         set_allocator(alloc, dealloc);
     }
