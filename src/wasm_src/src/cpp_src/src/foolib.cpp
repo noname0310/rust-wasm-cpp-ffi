@@ -1,6 +1,4 @@
-#include <cstddef>
-
-typedef unsigned int size_t;
+#include "foolib.h"
 
 void* (*allocate)(size_t);
 void (*deallocate)(void*, size_t);

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\noname\Projects\GitHub\rust-wasm-cpp-ffi\src\wasm_src\src\cpp_src\src\foolib.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\noname\Projects\GitHub\rust-wasm-cpp-ffi\src\wasm_src\src\cpp_src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{D12CF76D-7075-3CEF-AF4E-C9A6C58D7333}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

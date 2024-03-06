@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\noname\Projects\GitHub\rust-wasm-cpp-ffi\src\wasm_src\src\cpp_src\CMakeFiles\67e5e065c97cb2cb4cf2bdfda29ea6d0\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F57AA433-AAB4-3CE0-9B1C-656B3FA46DAB}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

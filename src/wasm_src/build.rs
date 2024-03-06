@@ -1,10 +1,9 @@
+use cmake;
+
 fn main() {
-    cc::Build::new()
-        .archiver("llvm-ar")
-        .cpp_link_stdlib(None)
-        .cpp(true)
-        .files([
-            "src/cpp_src/foolib.cpp"
-        ])
-        .compile("foolib");
+    let dst = cmake::Config::new("src/cpp_src")
+        // .define("s", "YES")
+        .build();
+    println!("cargo:rustc-link-search=native={}", dst.display());
+    println!("cargo:rustc-link-lib=static=foolib");
 }

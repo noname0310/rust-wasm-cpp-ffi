@@ -27,4 +27,5 @@ features = ["console"]
 wasm-bindgen-test = "0.3.41"
 
 [build-dependencies]
+cmake = "0.1.50"
 cc = "1.0.86"
