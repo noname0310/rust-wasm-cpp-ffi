@@ -1,4 +1,4 @@
-#include "foolib.h"
+#include "foolib.hpp"
 
 void* (*allocate)(size_t);
 void (*deallocate)(void*, size_t);
