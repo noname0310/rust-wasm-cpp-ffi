@@ -8,4 +8,7 @@ fn main() {
             "src/cpp_src/foolib.cpp"
         ])
         .compile("foolib");
+
+    println!("cargo:rerun-if-changed=src/cpp_src/foolib.hpp");
+    println!("cargo:rerun-if-changed=src/cpp_src/foolib.cpp");
 }

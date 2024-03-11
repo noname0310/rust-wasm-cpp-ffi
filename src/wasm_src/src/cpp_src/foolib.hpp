@@ -3,8 +3,11 @@
 typedef unsigned int size_t;
 
 extern "C" {
-    void set_allocator(void* (*alloc)(size_t), void (*dealloc)(void*, size_t));
+    void* allocate(size_t size);
+    void deallocate(void* ptr, size_t size);
+}
 
+extern "C" {
     int test_function(int i);
 
     int allocation_test(int size);
