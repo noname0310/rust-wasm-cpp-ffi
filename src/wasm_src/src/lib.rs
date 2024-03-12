@@ -3,6 +3,8 @@ use web_sys::console;
 
 #[link(name = "bullet")]
 extern "C" {
+    pub fn __wasm_call_ctors();
+
     pub fn bt_get_version() -> i32;
     
     // pub fn test_function(i: i32) -> i32;
@@ -25,6 +27,10 @@ extern "C" {
 
 #[wasm_bindgen(js_name = init)]
 pub fn init() {
+    unsafe {
+        __wasm_call_ctors();
+    }
+
     console_error_panic_hook::set_once();
 
     unsafe {
