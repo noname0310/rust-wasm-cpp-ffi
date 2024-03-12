@@ -4,6 +4,7 @@ fn main() {
         .cpp_link_stdlib(None)
         .cpp(true)
         .flag("-xc++")
+        // .flag("-fno-rtti")
         .includes([
             "cpp_wasm_std"
         ])
