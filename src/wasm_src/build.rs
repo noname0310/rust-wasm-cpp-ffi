@@ -3,12 +3,17 @@ fn main() {
         .archiver("llvm-ar")
         .cpp_link_stdlib(None)
         .cpp(true)
-        .files([
-            "src/cpp_src/foolib.hpp",
-            "src/cpp_src/foolib.cpp"
+        .flag("-xc++")
+        .includes([
+            "cpp_wasm_std"
         ])
-        .compile("foolib");
+        .files([
+            "cpp_src/lib.h",
+            "cpp_src/LinearMath/btScalar.h"
+        ])
+        .compile("bullet");
 
-    println!("cargo:rerun-if-changed=src/cpp_src/foolib.hpp");
-    println!("cargo:rerun-if-changed=src/cpp_src/foolib.cpp");
+    println!("cargo:rerun-if-changed=cpp_wasm_std");
+    println!("cargo:rerun-if-changed=cpp_src/lib.h");
+    println!("cargo:rerun-if-changed=cpp_src/LinearMath/btScalar.h");
 }
